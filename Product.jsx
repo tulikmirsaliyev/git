@@ -9,7 +9,7 @@ function Product() {
   let componentMounted=true;
 
   return (
-    <div>Product</div>
+    <div>Producta</div>
   )
 }
 
