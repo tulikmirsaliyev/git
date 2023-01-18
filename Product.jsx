@@ -33,9 +33,18 @@ const Loading =()=>{
   )
 }
 const ShowProduct =()=>{
-  <div className="buttons">
+  return(
+    <>
+    <div className="buttons d-flex justify-content-center">
     <button className="btn btn-outline-blue">All</button>
+    <button className="btn btn-outline-blue me-2">Men's Clothing</button>
+    <button className="btn btn-outline-blueme-2 ">Women's Clothing</button>
+    <button className="btn btn-outline-blue me-2">Jewelery Clothing</button>
+    <button className="btn btn-outline-blue me-2">Electronic Clothing</button>
   </div>
+    </>
+  )
+  
 }
   return (
     <div>
