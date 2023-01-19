@@ -1,4 +1,5 @@
 import React, { useSatate, useEffect, useState } from 'react';
+import Skeleton from "react-loading-skeleton";
 
 const Product = () => {
   const [data, setData] = useState([]);
@@ -28,19 +29,27 @@ const Product = () => {
   const Loading = () => {
     return (
       <>
-        Loading...
+        <div className="col-md-3">
+          <Skeleton height={350}/>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}/>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}/>
+        </div>
       </>
-    )
-  }
+    );
+  };
   const ShowProduct = () => {
     return (
       <>
         <div className="buttons d-flex justify-content-center">
-          <button className="btn btn-outline-primary">All</button>
-          <button className="btn btn-outline-primary me-2">Men's Clothing</button>
-          <button className="btn btn-outline-primary me-2 ">Women's Clothing</button>
-          <button className="btn btn-outline-primary me-2">Jewelery Clothing</button>
-          <button className="btn btn-outline-primary me-2">Electronic Clothing</button>
+          <button className="btn btn-outline-primary me-2" onClick={()=>setFilter(data)}>All</button>
+          <button className="btn btn-outline-primary me-2"onClick={()=>setFilter(data)}>Men's Clothing</button>
+          <button className="btn btn-outline-primary me-2 "onClick={()=>setFilter(data)}>Women's Clothing</button>
+          <button className="btn btn-outline-primary me-2"onClick={()=>setFilter(data)}>Jewelery Clothing</button>
+          <button className="btn btn-outline-primary me-2"onClick={()=>setFilter(data)}>Electronic Clothing</button>
         </div>
         {filter.map((product) => {
           return (
